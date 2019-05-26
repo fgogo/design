@@ -69,11 +69,11 @@ public class RecordEntity implements Serializable {
 	@Column(name = "acount", nullable = true)
 	private int acount;
 
-	@Column(name = "visitTime")
+	@Column(name = "visitTime", insertable = false, updatable = false, columnDefinition = "TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP")
 	@CreatedDate
 	private Date visitTime;
 
-	@Column(name = "modifytime", nullable = true)
+	@Column(name = "modifytime", nullable = true, updatable = false, columnDefinition = "TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP")
 	@LastModifiedDate
 	private Date modifytime;
 

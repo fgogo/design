@@ -89,16 +89,16 @@ public class InfoEntity implements Serializable {
 
 	// 创建时间
 
-	@Column(name = "createtime")
+	@Column(name = "createtime", insertable = false, updatable = false, columnDefinition = "TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP")
 	@CreatedDate
 	private Date createtime;
 
 	// 修改时间
-	@Column(name = "modifytime")
+	@Column(name = "modifytime", insertable = false, updatable = false, columnDefinition = "TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP")
 	@LastModifiedDate
 	private Date modifytime;
 	// 审批时间
-	@Column(name = "approve_time")
+	@Column(name = "approve_time", insertable = false, updatable = false, columnDefinition = "TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP")
 	private Date approveTime;
 	
 	public long getId() {
