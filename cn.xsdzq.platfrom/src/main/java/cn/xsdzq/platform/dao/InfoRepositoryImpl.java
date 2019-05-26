@@ -109,7 +109,7 @@ public class InfoRepositoryImpl implements InfoRepository {
 		em.merge(myInfoEntity);		
 	}
 
-	// add by fjx begin
+
 	@Override
 	public List<InfoEntity> searUncheckchInfos() {
 		// TODO Auto-generated method stub
@@ -129,6 +129,6 @@ public class InfoRepositoryImpl implements InfoRepository {
 		InfoEntity infoEntity = sqlQuery.getSingleResult();
 		return infoEntity.getCheckedResult();
 	}
-	// add by fjx end
+
 
 }

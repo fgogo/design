@@ -42,6 +42,15 @@ public class UserRepositoryImpl implements UserRepository {
 		sqlQuery.setParameter(1, name);
 		return sqlQuery.getSingleResult();
 	}
+	
+	@Override
+	public UserEntity userLogin(String username, String password) {
+		TypedQuery<UserEntity> sqlQuery = em.createQuery("SELECT u FROM UserEntity u WHERE u.username=? and u.password=? and level=2",
+				UserEntity.class);
+		sqlQuery.setParameter(1, username);
+		sqlQuery.setParameter(2, password);
+		return sqlQuery.getSingleResult();
+	}
 
 	@Override
 	public List<UserEntity> findAll() {

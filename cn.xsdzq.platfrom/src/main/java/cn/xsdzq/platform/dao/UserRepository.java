@@ -11,6 +11,8 @@ public interface UserRepository {
 	public UserEntity findUserById(long id);
 
 	public UserEntity findUserByName(String name);
+	
+	public UserEntity userLogin(String uername, String password);
 
 	public List<UserEntity> findAll();
 

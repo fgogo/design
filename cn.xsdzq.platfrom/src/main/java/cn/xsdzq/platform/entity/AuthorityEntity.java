@@ -65,13 +65,13 @@ public class AuthorityEntity implements GrantedAuthority, Comparable<AuthorityEn
 
 	// 创建时间
 
-	@Column(name = "createtime", insertable = false, updatable = false, columnDefinition = "TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP")
+	@Column(name = "createtime", insertable = false)
 	@CreatedDate
 	private Date createtime;
 
 	// 修改时间
 
-	@Column(name = "modifytime", nullable = true, updatable = false, columnDefinition = "TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP")
+	@Column(name = "modifytime", nullable = true)
 	@LastModifiedDate
 	private Date modifytime;
 

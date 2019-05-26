@@ -24,11 +24,9 @@ public interface IInfoService {
 
 	List<InfoEntity> searchInfos(String key);
 
-	// add by fjx begin
 	List<InfoEntity> searUncheckchInfos();
 
 	String getCheckResult(long id);
 
 	void modifyCheckResult(long id, boolean flag, String action);
-	// add by fjx end
 }
